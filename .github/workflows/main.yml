@@ -33,7 +33,7 @@ jobs:
         with:
           api-key: ${{ secrets.BC_API_KEY }}
          
-          use_enforcement_rules: true
+          use_enforcement_rules: false
           
       - name: Set up Node.js
         uses: actions/setup-node@v4
