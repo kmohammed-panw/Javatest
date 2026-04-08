@@ -31,6 +31,10 @@ jobs:
         run: node -v
         
       - name: Download cortexcli
+        env:
+          CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+          CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+          CORTEX_API_URL: "https://api-tac-c3.xdr.eu.paloaltonetworks.co
         run: |
           set -x
           crtx_resp=$(curl "${CORTEX_API_URL}/public_api/v1/unified-cli/releases/download-link?os=linux&architecture=amd64" \
