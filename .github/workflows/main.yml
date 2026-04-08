@@ -46,6 +46,10 @@ jobs:
           ./cortexcli --version
           
       - name: Run Cortex CLI Code Scan
+        env:
+          CORTEX_API_KEY: ${{secrets.CORTEX_API_KEY}}
+          CORTEX_API_KEY_ID: ${{secrets.CORTEX_API_KEY_ID}}
+          CORTEX_API_URL: "https://api-tac-c3.xdr.eu.paloaltonetworks.com"
         run: |
           ./cortexcli \
             --api-base-url "${CORTEX_API_URL}" \
