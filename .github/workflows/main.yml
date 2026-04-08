@@ -60,7 +60,7 @@ jobs:
             --repo-id "${{github.repository}}" \
             --branch "${{github.ref_name}}" \
             --source "GITHUB_ACTIONS" \
-            --timeout 3600 \
+            --timeout 86400 \
             --create-repo-if-missing
     
       - run: echo "🍏 This job's status is ${{ job.status }}."
